@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+
+.redcolor {
+    color: #ff0000;
+}
+
+.cred{
+    color: #f00;font-size: 48px;
+}
+
+.corange{
+    color: rgb(255, 125, 0);font-size: 48px;
+}
+
+.cgreen{
+    color: rgb(0, 255, 0);font-size: 48px;
+}
