@@ -11,21 +11,37 @@
 
     </head>
     <body>
+      <div class="d-flex p-3 bg-secondary text-white">  
+        <div class="p-2 bg-info">
+          <h1>WordMind </h1>
+          <h2>Wylosowane słowo: {{ selected_word }}</h2>
+        </div>
+        <div class="p-2 bg-warning"><h2>Legenda</h2>
+          <ul>
+            <li><span class="cred"> &#11044;</span> symbol oznacza błędne wszystkie litery</li>
+            <li><span class="cgreen"> &#11044;</span> symbol oznacza trafiną literę na właściwym miejscu</li>
+            <li><span class="corange"> &#11044;</span> symbol oznacza trafiną literę, ale nie jest ona na właściwym miejscu</li>
+          </ul>
+        </div>
+        <div class="p-2 bg-primary">
+          <p>Liczba słów w zestawie: {{words|length}}
+          <p>Liczba słów usera: {{user_words|length}}
+        </div>
+      </div>
+
         <div class="container">
-            <h1>Słowoku </h1>
-            <h2>Wylosowane słowo: {{ selected_word }}</h2>
+            
             <div class="mt-4 p-5 bg-primary text-white rounded">
-              <h2>Legenda</h2>
-              <ul>
-                <li><span class="cred"> &#11044;</span> symbol oznacza błędne wszystkie litery</li>
-                <li><span class="cgreen"> &#11044;</span> symbol oznacza trafiną literę na właściwym miejscu</li>
-                <li><span class="corange"> &#11044;</span> symbol oznacza trafiną literę, ale nie jest ona na właściwym miejscu</li>
-              </ul>
+              <h2>From</h2>
+              <form method="POST" action="" >
+                <div class="mb-3 mt-3">
+                  <input type="text" class="form-control" id="slowo" name="slowo" minlength="5" maxlength="5" size="5">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>  
-            <div class="container p-5 my-5 bg-dark text-white">
-            <p>Liczba słów w zestawie: {{words|length}}
-            <p>Liczba słów usera: {{user_words|length}}
-            </div>    
+
+              
             {% if user_words[-1] == selected_word%}
               <div class="alert alert-success alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -50,13 +66,7 @@
 
         
         <div class="container">
-          <h2>From</h2>
-          <form method="POST" action="" >
-            <div class="mb-3 mt-3">
-              <input type="text" class="form-control" id="slowo" name="slowo" minlength="5" maxlength="5" size="5">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+         
         </div>      
 
         <div class="container">
