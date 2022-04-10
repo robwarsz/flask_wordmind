@@ -11,19 +11,19 @@
 
     </head>
     <body>
-      <div class="d-flex p-3 bg-secondary text-white">  
-        <div class="p-2 bg-info">
+      <div class="d-flex mb-3 bg-secondary text-white">  
+        <div class="p-2 flex-fill bg-info">
           <h1>WordMind </h1>
           <h2>Wylosowane słowo: {{ selected_word }}</h2>
         </div>
-        <div class="p-2 bg-warning"><h2>Legenda</h2>
+        <div class="p-2 flex-fill bg-warning"><h2>Legenda</h2>
           <ul>
             <li><span class="cred"> &#11044;</span> symbol oznacza błędne wszystkie litery</li>
             <li><span class="cgreen"> &#11044;</span> symbol oznacza trafiną literę na właściwym miejscu</li>
             <li><span class="corange"> &#11044;</span> symbol oznacza trafiną literę, ale nie jest ona na właściwym miejscu</li>
           </ul>
         </div>
-        <div class="p-2 bg-primary">
+        <div class="p-2 flex-fill bg-primary">
           <p>Liczba słów w zestawie: {{words|length}}
           <p>Liczba słów usera: {{user_words|length}}
         </div>
